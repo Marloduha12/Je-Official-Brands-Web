@@ -1,0 +1,1012 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: transparent;
+  background-image: radial-gradient(#0b1215 1px, #f8f8ff 1px);
+  background-size: 32px 32px;
+}
+
+.loading-overlay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0b1215;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+}
+
+.loader {
+  height: 20vh;
+  width: 20vh;
+  max-height: 480px;
+  min-width: 480px;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Styling Nav Bar */
+nav {
+  background-color: #0b1215;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 128px;
+  justify-content: space-between;
+  height: 65px;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+nav .nav-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  flex-direction: column;
+}
+
+nav .nav-title .main-nav-title {
+  color: #f8f8ff;
+  font-size: 28px;
+  font-family: Verdana, sans-serif;
+}
+
+nav .nav-title .main-nav-title span {
+  color: #ff2c45;
+  font-size: 28px;
+}
+
+nav .nav-title .sub-nav-title {
+  color: #f8f8ff;
+  width: 100%;
+  height: 10px;
+  font-size: 10px;
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  margin-top: -5px;
+  text-align: justify;
+  letter-spacing: 0.6px;
+}
+
+nav .nav-title .sub-nav-title:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  color: #f8f8ff;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+nav ul li a:hover {
+  color: #ff2c45;
+  border-bottom: 1px solid #ff2c45;
+}
+
+a.active {
+  color: #ff2c45;
+  font-weight: 600;
+}
+
+.chat .btn-chat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid #ff2c45;
+  margin-top: 18px;
+  margin-right: -4px;
+  padding: 12px;
+  position: relative;
+  width: 95px;
+  height: 30px;
+  transition: 0.5s;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chat .btn-chat p {
+  position: absolute;
+  top: 5px;
+  left: 18px;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  color: #ff2c45;
+  font-weight: 600;
+}
+
+.chat .btn-chat svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  opacity: 0;
+  transition: 0.5s;
+  height: 16px;
+  fill: #f8f8ff;
+}
+
+.chat .btn-chat:hover p {
+  left: 8px;
+  color: #fff;
+}
+
+.chat .btn-chat:hover svg {
+  opacity: 1;
+}
+
+.chat .btn-chat:hover {
+  background-color: #ff2c45;
+}
+
+/* Styling Content Home */
+.content {
+  width: 100%;
+  height: 640px;
+  margin-inline: auto;
+  padding: 32px 128px;
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  gap: 26px;
+  background-image: url("img/Banner-Web.png");
+  background-size: cover;
+}
+
+.content .content-container {
+  justify-content: end;
+}
+
+.content .content-container .title {
+  color: #0b1215;
+  margin-block: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.content .content-container .title {
+  display: flex;
+  flex-wrap: wrap;
+  width: 615px;
+  overflow: hidden;
+}
+
+.content .content-container .title .main-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  line-height: 65px;
+}
+
+.content .content-container .title .main-title h1 {
+  color: #0b1215;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 74px;
+}
+
+.content .content-container .title .main-title .animate-text {
+  margin: 0;
+  overflow: hidden;
+  line-height: 74px;
+}
+
+.content .content-container .title .main-title .animate-text span {
+  font-size: 50px;
+  color: #ff2c45;
+  font-weight: 700;
+  display: inline-block;
+  display: none;
+  line-height: 74px;
+}
+
+.content .content-container .title .main-title .animate-text span.text-in {
+  display: block;
+  animation: textIn 0.5s ease;
+}
+
+.content .content-container .title .main-title .animate-text span.text-out {
+  animation: textOut 0.5s ease;
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.content .content-container p {
+  color: #0b1215;
+  line-height: 28px;
+  font-size: 18px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.137);
+}
+
+.content .content-container p span {
+  color: #ff2c45;
+  line-height: 28px;
+  font-size: 22px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.content .content-container .our-btn {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 40px;
+  background: #0b1215;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.content .content-container .our-btn:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ff2c45;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.content .content-container .our-btn:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.content .content-container .our-btn span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 14px 14px;
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  color: #f8f8ff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+
+.content .content-container .our-btn svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 14px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  opacity: 0;
+  height: 18px;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.content .content-container .our-btn:hover svg {
+  opacity: 1;
+  fill: #0b1215;
+}
+
+.content .content-container .our-btn:hover span {
+  right: 12px;
+  color: #0b1215;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Styling Content About */
+.about {
+  width: 100%;
+  height: 585px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-inline: auto;
+  padding: 0px 128px;
+  background-color: #0b1215d5;
+}
+
+.about .about-title {
+  color: #f8f8ff;
+  font-size: 32px;
+  border-bottom: 2px solid #ff2c45;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.about .about-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-inline: auto;
+  gap: 42px;
+}
+
+.about .about-container .card-a {
+  width: 335px;
+  height: 425px;
+  position: relative;
+  bottom: 18px;
+  overflow: hidden;
+}
+
+.card-a .card-content {
+  width: 100%;
+  height: 100%;
+}
+
+.card-content .front-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.img-1 {
+  background-image: url("img/img-1.jpg");
+}
+
+.img-2 {
+  background-image: url("img/img-2.jpg");
+}
+
+.img-3 {
+  background-image: url("img/img-3.jpg");
+}
+
+.card-content .front-content p {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 1;
+  color: #ff2c45;
+  background-clip: text;
+  text-shadow: 2px 0px 1px #f8f8ff;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.card-content .main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  gap: 10px;
+  background-color: #ff2c45;
+  color: #f8f8ff;
+  padding: 20px;
+  line-height: 1.5;
+  pointer-events: none;
+  transform: translateY(-96%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.card-content .main-content .heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card-content .main-content span {
+  color: #011222;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.card-content:hover .main-content {
+  transform: translateY(0);
+}
+
+.card-content:hover .front-content {
+  transform: translateY(30%);
+}
+
+.card-content:hover .front-content p {
+  opacity: 0;
+}
+
+/* Styling Content Product */
+.product {
+  width: 100%;
+  height: 585px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-inline: auto;
+  padding: 0px 128px;
+}
+
+.product .product-title {
+  color: #011222;
+  font-size: 32px;
+  border-bottom: 2px solid #ff2c45;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.product .product-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-inline: auto;
+  gap: 18px;
+}
+
+.product .product-container .card-p {
+  width: 195px;
+  height: 270px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  position: relative;
+  margin-top: 46px;
+  margin-bottom: 125px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.img-product-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/T-Shirt.png");
+}
+
+.img-product-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/Hoodie.png");
+}
+
+.img-product-3 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/Socks.png");
+}
+
+.img-product-4 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/Balaclava.png");
+}
+
+.img-product-5 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/Bandana.png");
+}
+
+.details > p {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.details > label {
+  font-weight: bold;
+}
+
+.details {
+  color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: 100%;
+  background-color: #ff2c45;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  transition: height 0.3s ease-in-out;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.details .see-more {
+  color: #0b1215;
+  width: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 4px;
+  gap: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.see-more svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.see-more:hover svg {
+  animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.card-p:hover > .details {
+  height: 105px;
+}
+
+/* Styling Content Contact */
+.contact {
+  width: 100%;
+  height: 545px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-inline: auto;
+  padding: 0px 128px;
+  background-color: #0b1215d5;
+}
+
+.contact .contact-title {
+  color: #f8f8ff;
+  font-size: 32px;
+  border-bottom: 2px solid #ff2c45;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contact .contact-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-inline: auto;
+  gap: 42px;
+}
+
+.contact .contact-container .card-c {
+  width: 525px;
+  height: 335px;
+  background-size: cover;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.bg-img {
+  background-image: url("https://lh3.googleusercontent.com/-IfMTZ-vsNzg/W_6rmmctijI/AAAAAAAAA5I/t8_kgcSpghkPLdApzS_cVBbIrOkqbyUnwCLcBGAs/s1600/map.png");
+}
+
+.card-c .item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.card-c .cont {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  flex-direction: column;
+  padding: 6px;
+  gap: 4px;
+}
+
+.card-c .cont h6 {
+  color: #ff2c45;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.card-c .cont p {
+  color: #f8f8ff;
+  font-size: 16px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+form .identity-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -5px;
+}
+
+form .identity-form .identity {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+form .identity-form .identity input[type="text"],
+form .identity-form .identity input[type="email"] {
+  width: 245px;
+  height: 40px;
+  padding: 8px 8px;
+  border-radius: 8px;
+  outline: none;
+  color: #f8f8ff;
+  font-family: inherit;
+  background-color: #0b121595;
+  border: 1px solid #ff2c45;
+  font-size: 14px;
+  font-family: "Courier New", monospace;
+  transition: all 0.5s ease-in-out;
+}
+
+form .identity-form .identity.error input[type="text"],
+form .identity-form .identity.error input[type="email"] {
+  background-color: #ff2c4595;
+  border: 1px solid #f8f8ff;
+}
+
+form .identity-form .identity.error:hover input[type="text"],
+form .identity-form .identity.error:hover input[type="email"] {
+  background-color: #0b121595;
+}
+
+form .identity-form .identity input[type="text"]:hover,
+form .identity-form .identity input[type="text"]:focus,
+form .identity-form .identity input[type="email"]:hover,
+form .identity-form .identity input[type="email"]:focus {
+  border: 1px solid #0b1215;
+}
+
+form .identity-form .identity .error-txt {
+  color: #f8f8ffd0;
+  font-size: 12px;
+  font-family: "Segoe UI", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  padding-left: 6px;
+  margin-top: -16px;
+  display: none;
+}
+
+form .identity-form .identity.error .error-txt {
+  display: block;
+}
+
+.message-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+form .message-form textarea {
+  width: 100%;
+  height: 145px;
+  padding: 8px 8px;
+  border-radius: 8px;
+  outline: none;
+  color: #f8f8ff;
+  font-family: inherit;
+  background-color: #0b121595;
+  border: 1px solid #ff2c45;
+  font-size: 14px;
+  font-family: "Courier New", monospace;
+  transition: all 0.5s;
+  resize: none;
+}
+
+form .message-form.error textarea {
+  background-color: #ff2c4595;
+  border: 1px solid #f8f8ff;
+}
+
+form .message-form.error:hover textarea {
+  background-color: #0b121595;
+}
+
+form .message-form textarea:hover,
+form .message-form textarea:focus {
+  border: 1px solid #0b1215;
+}
+
+form .message-form .error-txt {
+  color: #f8f8ffd0;
+  font-size: 12px;
+  font-family: "Segoe UI", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  padding-left: 6px;
+  margin-top: -16px;
+  display: none;
+}
+
+form .message-form.error .error-txt {
+  display: block;
+}
+
+form label {
+  color: #ff2c45;
+  font-size: 14px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+  padding-left: 6px;
+}
+
+form button {
+  color: #ff2c45;
+  width: 185px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 0;
+  background-color: #0b121595;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+form button:hover {
+  letter-spacing: 3px;
+  background-color: #ff2c45;
+  color: #f8f8ff;
+}
+
+form button:active {
+  letter-spacing: 3px;
+  background-color: #ff2c45;
+  color: #f8f8ff;
+  transform: translateY(1px);
+  transition: 100ms;
+}
+
+/* Styling Footer */
+.footer {
+  background-color: #0b1215;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 16px;
+  height: 125px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0.2, 0, 0);
+}
+
+.footer h3 {
+  color: #f8f8ff;
+  font-size: 20px;
+  font-family: "Segoe UI", sans-serif;
+  letter-spacing: 2.5px;
+}
+
+.footer .social-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 2px 8px;
+}
+
+.footer .social-btn button {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ff2c45;
+  border-radius: 8px;
+  background-color: #ff2c45;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.social-btn button:hover {
+  transform: rotate(360deg);
+  border-radius: 50%;
+  border: 1px solid #f8f8ff;
+  background-color: #0b1215;
+}
+
+.social-btn button:hover svg {
+  fill: #f8f8ff;
+}
+
+.footer h4 {
+  color: #f8f8ff;
+  font-size: 14px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2.5px;
+}
+
+.footer h4 span {
+  color: #ff2c45;
+}
+
+/* Styling Scroll Bar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 0 64px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .content {
+    padding: 32px 64px;
+  }
+
+  .about,
+  .product,
+  .contact {
+    padding: 0 64px;
+  }
+
+  .footer {
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    padding: 0 32px;
+  }
+
+  .container {
+    padding: 0 8px;
+  }
+
+  .content {
+    padding: 16px 32px;
+  }
+
+  .about,
+  .product,
+  .contact {
+    padding: 0 32px;
+  }
+
+  .footer {
+    padding: 0 8px;
+  }
+}

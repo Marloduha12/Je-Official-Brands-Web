@@ -1,0 +1,633 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: transparent;
+  background-image: radial-gradient(#0b1215 1px, #f8f8ff 1px);
+  background-size: 32px 32px;
+}
+
+/* Styling Loading */
+.loading-overlay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0b1215;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+}
+
+.loader {
+  height: 20vh;
+  width: 20vh;
+  max-height: 480px;
+  min-width: 480px;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling Nav Bar */
+nav {
+  background-color: #0b1215;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 128px;
+  justify-content: space-between;
+  height: 65px;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+nav .nav-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav .nav-title .main-nav-title {
+  color: #f8f8ff;
+  font-size: 28px;
+  font-family: Verdana, sans-serif;
+}
+
+nav .nav-title .main-nav-title span {
+  color: #ff2c45;
+  font-size: 28px;
+}
+
+nav .nav-title .sub-nav-title {
+  color: #f8f8ff;
+  width: 100%;
+  height: 10px;
+  font-size: 10px;
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  margin-top: -5px;
+  text-align: justify;
+  letter-spacing: 0.6px;
+}
+
+nav .nav-title .sub-nav-title:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  color: #f8f8ff;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+nav ul li a:hover {
+  color: #ff2c45;
+  border-bottom: 1px solid #ff2c45;
+}
+
+a.active {
+  color: #ff2c45;
+  font-weight: 600;
+}
+
+.home-btn button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-top: 18px;
+  margin-right: -8px;
+  border: 1px solid #ff2c45;
+  background-color: #ff2c45;
+  transition: all 0.5s ease-in-out;
+}
+
+.home-btn:hover button {
+  border: 1px solid #f8f8ff;
+  background-color: transparent;
+}
+
+.home-btn svg {
+  fill: #0b1215;
+  transition: all 0.5s ease-in-out;
+}
+
+.home-btn:hover svg {
+  fill: #f8f8ff;
+}
+
+/* Styling Section */
+.product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-inline: auto;
+  padding: 0px 128px;
+}
+
+.product .title {
+  font-size: 28px;
+  font-family: Verdana, sans-serif;
+  border-bottom: 2px solid #ff2c45;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-inline: auto;
+  gap: 28px;
+}
+
+.product .product-container .card-p {
+  width: 240px;
+  height: 285px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  position: relative;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Image Shirt Source */
+.img-shirt-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-1.png");
+}
+
+.img-shirt-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-2.png");
+}
+
+.img-shirt-3 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-3.png");
+}
+
+.img-shirt-4 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-4.png");
+}
+
+.img-shirt-5 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-5.png");
+}
+
+.img-shirt-6 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-6.png");
+}
+
+.img-shirt-7 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-7.png");
+}
+
+.img-shirt-8 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-shirt-8.png");
+}
+
+/* Image Hoodie Source */
+.img-hoodie-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-1.png");
+}
+
+.img-hoodie-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-2.png");
+}
+
+.img-hoodie-3 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-3.png");
+}
+
+.img-hoodie-4 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-4.png");
+}
+
+.img-hoodie-5 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-5.png");
+}
+
+.img-hoodie-6 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-6.png");
+}
+
+.img-hoodie-7 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-7.png");
+}
+
+.img-hoodie-8 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-hoodie-8.png");
+}
+
+/* Image Sock Source */
+.img-sock-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-1.png");
+}
+
+.img-sock-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-2.png");
+}
+
+.img-sock-3 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-3.png");
+}
+
+.img-sock-4 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-4.png");
+}
+
+.img-sock-5 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-5.png");
+}
+
+.img-sock-6 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-6.png");
+}
+
+.img-sock-7 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-7.png");
+}
+
+.img-sock-8 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-sock-8.png");
+}
+
+/* Image Balaclava Source */
+.img-balaclava-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-1.png");
+}
+
+.img-balaclava-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-2.png");
+}
+
+.img-balaclava-3 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-3.png");
+}
+
+.img-balaclava-4 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-4.png");
+}
+
+.img-balaclava-5 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-5.png");
+}
+
+.img-balaclava-6 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-6.png");
+}
+
+.img-balaclava-7 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-7.png");
+}
+
+.img-balaclava-8 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-balaclava-8.png");
+}
+
+/* Image Bandana Source */
+.img-bandana-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-1.png");
+}
+
+.img-bandana-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-2.png");
+}
+
+.img-bandana-3 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-3.png");
+}
+
+.img-bandana-4 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-4.png");
+}
+
+.img-bandana-5 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-5.png");
+}
+
+.img-bandana-6 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-6.png");
+}
+
+.img-bandana-7 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-7.png");
+}
+
+.img-bandana-8 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../img/img-bandana-8.png");
+}
+
+.details > .desc {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table,
+th,
+td {
+  border: none;
+  text-align: left;
+  padding-right: 4px;
+}
+
+.details > label {
+  font-weight: bold;
+}
+
+.details {
+  color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: 100%;
+  background-color: #ff2c45;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.details .see-more {
+  color: #0b1215;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 4px;
+  gap: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.see-more svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.see-more:hover svg {
+  animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.card-p:hover > .details {
+  height: 135px;
+  background-color: #ff2c45e0;
+}
+
+#shirts {
+  margin-top: 65px;
+}
+
+#hoodies,
+#balaclavas {
+  background-color: #0b1215d5;
+}
+
+#hoodies h2,
+#balaclavas h2 {
+  color: #f8f8ff;
+}
+
+/* Styling Footer */
+.footer {
+  background-color: #0b1215;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 16px;
+  height: 125px;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0.2, 0, 0);
+}
+
+.footer h3 {
+  color: #f8f8ff;
+  font-size: 20px;
+  font-family: "Segoe UI", sans-serif;
+  letter-spacing: 2.5px;
+}
+
+.footer .social-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 2px 8px;
+}
+
+.footer .social-btn button {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ff2c45;
+  border-radius: 8px;
+  background-color: #ff2c45;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.social-btn button:hover {
+  transform: rotate(360deg);
+  border-radius: 50%;
+  border: 1px solid #f8f8ff;
+  background-color: #0b1215;
+}
+
+.social-btn button:hover svg {
+  fill: #f8f8ff;
+}
+
+.footer h4 {
+  color: #f8f8ff;
+  font-size: 14px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2.5px;
+}
+
+.footer h4 span {
+  color: #ff2c45;
+}
+
+/* Styling Scroll Bar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

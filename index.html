@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Je Official Brand</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="icon" href="img/Icon-Web.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Loading Section -->
+    <div id="loading" class="loading-overlay">
+      <svg
+        width="240"
+        height="240"
+        viewBox="0 0 240 240"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="loader"
+      >
+        <defs>
+          <path
+            id="move-path"
+            d="M102.546 83.5C109.859 70.8333 128.141 70.8333 135.454 83.5L157.971 122.5C165.284 135.167 156.143 151 141.517 151H96.4833C81.8571 151 72.7158 135.167 80.0289 122.5L102.546 83.5Z"
+            fill="#D9D9D9"
+          ></path>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="5"
+              result="blur"
+            ></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -32"
+            ></feColorMatrix>
+          </filter>
+        </defs>
+        <g filter="url(#goo)">
+          <circle
+            cx="119"
+            cy="74"
+            r="20"
+            stroke="#ff2c45"
+            stroke-width="8"
+          ></circle>
+          <circle
+            cx="79"
+            cy="141"
+            r="20"
+            stroke="#ff2c45"
+            stroke-width="8"
+          ></circle>
+          <circle
+            cx="157"
+            cy="141"
+            r="20"
+            stroke="#ff2c45"
+            stroke-width="8"
+          ></circle>
+          <circle cx="0" cy="0" r="14" fill="#ff2c45">
+            <animateMotion
+              path="M102.546 83.5C109.859 70.8333 128.141 70.8333 135.454 83.5L157.971 122.5C165.284 135.167 156.143 151 141.517 151H96.4833C81.8571 151 72.7158 135.167 80.0289 122.5L102.546 83.5Z"
+              dur="2s"
+              repeatCount="indefinite"
+            ></animateMotion>
+          </circle>
+        </g>
+      </svg>
+    </div>
+
+    <div class="container">
+      <!-- Nav Bar Section -->
+      <header>
+        <nav>
+          <div class="nav-title">
+            <h3 class="main-nav-title"><span>JE</span> OFFICIAL</h3>
+            <p class="sub-nav-title">B R A N D S</p>
+          </div>
+          <ul>
+            <li>
+              <a href="#home" class="active">Home</a>
+            </li>
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+            <li>
+              <a href="#product">Products</a>
+            </li>
+            <li>
+              <a href="#contact">Contact Us</a>
+            </li>
+          </ul>
+          <div class="chat">
+            <a href="https://wa.me/6285229980007" target="_blank">
+              <button class="btn-chat">
+                <p>Text Us</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-whatsapp"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                  />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content Section-->
+      <section class="content" id="home">
+        <div class="content-container">
+          <div class="title">
+            <div class="main-title">
+              <h1>Looking For</h1>
+              <p class="animate-text">
+                <span>Shirts?</span>
+                <span>Hoodies?</span>
+                <span>Socks?</span>
+                <span>Balaclavas?</span>
+                <span>Bandanas?</span>
+              </p>
+            </div>
+          </div>
+          <p>
+            "<span>Suit Up, Boss:</span> Dress Like a Gangster, Rule Like a
+            King!"
+          </p>
+          <br />
+          <button class="our-btn">
+            <span>Look Now</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-eye-fill"
+              viewBox="0 0 14 14"
+            >
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+              <path
+                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section class="about" id="about">
+        <h2 class="about-title">About Us</h2>
+        <div class="about-container">
+          <div class="card-a">
+            <div class="card-content">
+              <div class="front-content img-1">
+                <p>History</p>
+              </div>
+              <div class="main-content">
+                <p class="heading">History</p>
+                <p>
+                  It is a journey beyond <span>limits</span>, our clothing store
+                  was born from the spirit of <span>rebellion</span> and
+                  <span>courage</span> of street pioneers. Rooted in the dark
+                  night life, we trace the footsteps of city legends full of
+                  <span>mystery</span>. With <span>courage</span> and
+                  <span>fearless style</span>, we bring the nuances of classic
+                  and modern from the world of <span>gangsterism</span> filled
+                  with history and thrilling stories.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-a">
+            <div class="card-content">
+              <div class="front-content img-2">
+                <p>Philosophy</p>
+              </div>
+              <div class="main-content">
+                <p class="heading">Philosophy</p>
+                <p>
+                  Our philosophy revolves around <span>courage</span>,
+                  <span>freedom</span>, and <span>strength of character</span>.
+                  We believe that every individual possesses
+                  <span>strength</span> in their <span>uniqueness</span>, and
+                  through our clothing, we aim to instill unwavering
+                  <span>confidence</span> in every step taken. We advocate for
+                  the spirit of <span>independence</span> and
+                  <span>courage</span> to pursue dreams, while remaining true to
+                  a <span>strong</span> and <span>unwavering</span>
+                  <span>identity</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-a">
+            <div class="card-content">
+              <div class="front-content img-3">
+                <p>Motto</p>
+              </div>
+              <div class="main-content">
+                <p class="heading">Motto</p>
+                <p>
+                  "<span>Dare to be Different</span>,
+                  <span>Without Limits</span>". Our <span>motto</span> reflects
+                  an unrestrained spirit to explore uncharted paths in
+                  <span>style</span> and <span>courage</span>. We invite you to
+                  take risks, stand out, and express yourself without
+                  <span>barriers</span>. By wearing our clothes, you're not just
+                  donning <span>garments</span>, but you're advocating for a
+                  <span>lifestyle</span> that prioritizes
+                  <span>courage</span> and <span>freedom</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Section -->
+      <section class="product" id="product">
+        <h2 class="product-title">Our Product</h2>
+        <div class="product-container">
+          <div class="card-p img-product-1">
+            <div class="details">
+              <label>Shirts</label>
+              <p>
+                Shirt collection with our cool designs
+                <br />
+                <a href="page/product/product.html#shirt" class="see-more transition-link"
+                  >See More
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-right-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                      />
+                    </svg> </span
+                ></a>
+              </p>
+            </div>
+          </div>
+          <div class="card-p img-product-2">
+            <div class="details">
+              <label>Hoodies</label>
+              <p>
+                Hoodie collection with our cool designs
+                <br />
+                <a href="page/product/product.html#hoodies" class="see-more transition-link"
+                  >See More
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-right-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                      />
+                    </svg> </span
+                ></a>
+              </p>
+            </div>
+          </div>
+          <div class="card-p img-product-3">
+            <div class="details">
+              <label>Socks</label>
+              <p>
+                Collection of socks with our cool designs
+                <br />
+                <a href="page/product/product.html#socks" class="see-more transition-link"
+                  >See More
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-right-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                      />
+                    </svg> </span
+                ></a>
+              </p>
+            </div>
+          </div>
+          <div class="card-p img-product-4">
+            <div class="details">
+              <label>Balaclavas</label>
+              <p>
+                Balaclava collection with our cool designs
+                <br />
+                <a href="page/product/product.html#balaclavas" class="see-more transition-link"
+                  >See More
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-right-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                      />
+                    </svg> </span
+                ></a>
+              </p>
+            </div>
+          </div>
+          <div class="card-p img-product-5">
+            <div class="details">
+              <label>Bandanas</label>
+              <p>
+                Bandana collection with our cool designs
+                <br />
+                <a href="page/product/product.html#bandanas" class="see-more transition-link"
+                  >See More
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-right-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                      />
+                    </svg> </span
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Us Section -->
+      <section class="contact" id="contact">
+        <h2 class="contact-title">Contact Us</h2>
+        <div class="contact-container">
+          <div class="card-c bg-img">
+            <div class="items">
+              <div class="cont">
+                <h6>PHONE :</h6>
+                <p>+62 852-2998-0007</p>
+              </div>
+            </div>
+            <div class="items">
+              <div class="cont">
+                <h6>ADDRESS :</h6>
+                <p>Babarsari Downtown</p>
+                <p>Seturan City</p>
+              </div>
+            </div>
+            <div class="items">
+              <div class="cont">
+                <h6>EMAIL :</h6>
+                <p>JeOfficial@dmail.us</p>
+                <p>JeOfficial12@yahaha.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-c">
+            <form action="#">
+              <div class="identity-form">
+                <div class="identity">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    class="item"
+                    id="name"
+                    name="name"
+                    autocomplete="off"
+                  />
+                  <div class="error-txt">*Name can't be blank</div>
+                </div>
+                <div class="identity">
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    class="item"
+                    id="email"
+                    name="email"
+                    autocomplete="off"
+                  />
+                  <div class="error-txt">*Email can't be blank</div>
+                </div>
+              </div>
+              <div class="message-form">
+                <label for="message">How Can We Help You?</label>
+                <textarea
+                  name="message"
+                  class="item"
+                  id="message"
+                  autocomplete="off"
+                ></textarea>
+                <div class="error-txt">*Message can't be blank</div>
+              </div>
+              <button type="submit" class="form-submit-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <h3 class="footer-title">OUR SOCIAL MEDIA</h3>
+        <div class="social-btn">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-facebook"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+              />
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-twitter-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+              />
+            </svg>
+          </button>
+          <a
+            href="https://www.instagram.com/jeofficial.brand?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+          >
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </button>
+          </a>
+        </div>
+        <h4>
+          COPYRIGHT © 2024 JE OFFICIAL BRANDS.
+          <a href="page/team-profile/team-profile.html"
+            ><span>DESIGN BY MAHASA TEAM</span></a
+          >
+        </h4>
+      </footer>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
